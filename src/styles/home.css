@@ -1,0 +1,34 @@
+/* Full-page animated background */
+.page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: url("https://wallpapercave.com/wp/wp3493593.jpg") repeat;
+  background-size: auto 100%;
+  animation: moveBg 130s linear infinite;
+  overflow-x: hidden;
+}
+
+/* Smooth background movement */
+@keyframes moveBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20000px 0; /* moves horizontally */
+  }
+}
+
+/* Hero section (keeps content centered without extra space) */
+.hero {
+  height: 100vh;
+  padding-top: 70px; /* space for navbar */
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+.wallpaper-card img {
+  height: 250px;       /* fixed thumbnail height */
+  object-fit: cover;   /* crop image nicely */
+  width: 100%;
+  border-radius: 8px;
+}

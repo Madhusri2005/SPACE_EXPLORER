@@ -1,0 +1,47 @@
+/* Full-page animated background */
+.page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: url("https://wallpapercave.com/wp/wp3493593.jpg") repeat;
+  background-size: auto 100%;
+  animation: moveBg 130s linear infinite;
+  overflow-x: hidden;
+}
+
+/* Smooth background movement */
+@keyframes moveBg {
+  from { background-position: 0 0; }
+  to { background-position: 20000px 0; }
+}
+
+/* Contact container */
+.contact-page .contact-container {
+  max-width: 600px;          /* Maximum width for larger screens */
+  width: 40%;                /* Take 90% of screen on small devices */
+  margin: 120px auto 60px auto;
+  padding: 40px 20px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Form controls - make them stretch full width */
+.contact-form .form-control {
+  width: 100%;
+  background-color: #ccc3c3;
+  
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.contact-form .form-control:focus {
+  background-color: #111;
+  color: #fff;
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+.contact-form .form-label {
+  font-weight: 500;
+}

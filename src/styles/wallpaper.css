@@ -1,0 +1,18 @@
+.page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: url("https://wallpapercave.com/wp/wp3493593.jpg") repeat;
+  background-size: auto 100%;
+  animation: moveBg 130s linear infinite;
+  overflow-x: hidden;
+}
+
+@keyframes moveBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20000px 0;
+  }
+}

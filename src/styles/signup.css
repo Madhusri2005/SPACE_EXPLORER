@@ -1,0 +1,119 @@
+/* Container with moving background */
+.signup-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("https://wallpapercave.com/wp/wp3493593.jpg") repeat;
+  background-size: cover;
+  animation: moveBg 60s linear infinite; /* background movement */
+}
+
+/* Animate background slowly */
+@keyframes moveBg {
+  from { background-position: 0 0; }
+  to { background-position: -500px -500px; }
+}
+
+/* Signup box with opacity & blur */
+.signup-box {
+/* semi-transparent */
+  background-color: rgb(35, 34, 34);
+  color: white;
+  border-radius: 15px;
+  width: 400px;
+  backdrop-filter: blur(10px); /* glassmorphism */
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  z-index: 1;
+}
+
+/* Glowing title */
+.signup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 8px #00f, 0 0 16px #0ff, 0 0 24px #0ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  to { text-shadow: 0 0 20px #00f, 0 0 30px #0ff; }
+}
+
+/* Form input styling */
+.signup-box input {
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.signup-box button {
+  display: block !important;       /* make it block */
+  width: auto !important;          /* shrink to text width */
+  margin: 15px auto !important;    /* center horizontally */
+  padding: 6px 20px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc, #ff00cc, #3333ff);
+  background-size: 300% 300%;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 8px #6a11cb, 0 0 16px #2575fc, 0 0 24px #ff00cc;
+  animation: galaxyGlow 5s ease infinite;
+  text-align: center;
+}
+
+/* Hover glow */
+.signup-box button:hover {
+  box-shadow: 0 0 15px #6a11cb, 0 0 30px #2575fc, 0 0 45px #ff00cc;
+  transform: scale(1.07);
+}
+
+@keyframes galaxyGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Dark input fields inside signup box */
+.signup-box input.form-control {
+  background-color: #1d1c1c;          /* dark/ash color */
+  color: #fff;                     /* white text */
+  border: 1px solid #2e2c2c;          /* subtle border */
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect for input fields */
+.signup-box input.form-control:focus {
+  background-color: #151212;          /* darker on focus */
+  border: 1px solid #6a11cb;      /* glowing border color */
+  box-shadow: 0 0 8px #6a11cb;    /* subtle glow */
+  color: #fff;
+}
+.signup-box input.form-control::placeholder {
+  color: #aaa;       /* light gray for visibility */
+  opacity: 1;        /* make sure it’s fully visible */
+}
+/* Style the login link */
+.signup-box .login-link {
+  color: #ccc;                /* light gray */
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signup-box .login-link a {
+  color: #6a11cb;             /* galaxy purple color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signup-box .login-link a:hover {
+  color: #ff00cc;             /* pink glow on hover */
+  text-shadow: 0 0 8px #6a11cb, 0 0 12px #ff00cc;
+}
